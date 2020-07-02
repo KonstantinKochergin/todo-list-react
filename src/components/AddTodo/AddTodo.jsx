@@ -26,12 +26,17 @@ const AddTodo = props => {
         }
     }
 
+    const handleKeyup = event => {
+        if (event.code === 'Enter') {
+            addTodo()
+        }
+    }
+
     useEffect(() => {
-        document.addEventListener('keyup', event => {
-            if (event.code === 'Enter') {
-                addTodo()
-            }
-        })
+        document.addEventListener('keyup', handleKeyup)
+        return () => {
+            document.removeEventListener('keyup', handleKeyup)
+        }
     })
 
     return (

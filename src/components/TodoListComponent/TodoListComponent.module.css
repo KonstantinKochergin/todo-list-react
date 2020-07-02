@@ -1,5 +1,16 @@
 .container {
     width: 400px;
     border: #d1d1d1 1px solid;
+    box-sizing: border-box;
     padding-bottom: 12px;
+}
+
+@media only screen and (max-width: 500px) {
+    .container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }

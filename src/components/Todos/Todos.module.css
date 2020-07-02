@@ -8,3 +8,9 @@
     box-sizing: border-box;
     overflow-y: auto;
 }
+
+@media only screen and (max-width: 500px) {
+    .container {
+        flex-grow: 1;
+    }
+}

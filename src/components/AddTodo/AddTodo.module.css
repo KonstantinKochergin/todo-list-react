@@ -17,16 +17,18 @@
 }
 
 .error {
-    display: none;
+    visibility: hidden;
     font-size: 10px;
     color: red;
 }
 
 .errorVisible {
-    display: block;
+    visibility: visible;
 }
 
 .plusButton {
+    position: relative;
+    top: 3px;
     width: 18px;
     height: 18px;
     margin-right: 12px;
@@ -40,7 +42,9 @@
 
 .todoInput {
     width: 100%;    
-    padding: 2px;
+    padding: 4px;
+    border: 2px #e7e7e7 solid;
+    border-radius: 4px;
     box-sizing: border-box;
     font-size: 15px;
     outline: none;

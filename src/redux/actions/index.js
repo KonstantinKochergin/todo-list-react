@@ -14,3 +14,7 @@ export const toggleTodo = id => ({
 export const deleteCompletedTodos = () => ({
     type: 'DELETE_COMPLETED',
 })
+
+export const getTodosFromStorage = () => ({
+    type: 'GET_TODOS_FROM_STORAGE'
+})
