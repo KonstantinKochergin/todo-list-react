@@ -7,11 +7,11 @@ import {getTodosFromStorage} from '../../redux/actions/index'
 import { connect } from 'react-redux'
 
 const TodoListComponent = props => {
-    /*
+    
     useEffect(() => {
         props.getTodosFromStorage()
     })
-    */
+    
     return (
         <div className={styles.container}>
             <Header/>

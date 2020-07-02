@@ -1,8 +1,10 @@
-let nextTodoID = 0
+export const ADD_TODO = 'ADD_TODO'
+export const TOGGLE_TODO = 'TOGGLE_TODO'
+export const DELETE_COMPLETED = 'DELETE_COMPLETED'
+export const GET_TODOS_FROM_STORAGE = 'GET_TODOS_FROM_STORAGE'
 
 export const addTodo = text => ({
     type: 'ADD_TODO',
-    id: nextTodoID++,
     text
 })
 

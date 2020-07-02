@@ -13,7 +13,7 @@ const Todos = props => {
     return (
         <div className={styles.container}>
             {
-                props.todos !== undefined ?
+                props.todos ?
                     props.todos.map((todo, index) => (
                         <TodoItem todoText={todo.text}
                                         id={todo.id}
