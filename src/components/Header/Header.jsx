@@ -1,12 +1,14 @@
 import React from 'react'
 import styles from './Header.module.css'
-import {connect} from 'react-redux'
+import {useDispatch} from 'react-redux'
 import {deleteCompletedTodos} from '../../redux/actions/index'
 
 const Header = props => {
 
+    const dispatch = useDispatch()
+
     const onDeleteCompletedTodos = () => {
-        props.deleteCompletedTodos()
+        dispatch(deleteCompletedTodos())
     }
 
     return (
@@ -17,8 +19,4 @@ const Header = props => {
     )
 }
 
-const mapDispatchToProps = dispatch => ({
-    deleteCompletedTodos: () => dispatch(deleteCompletedTodos())
-})
-
-export default connect(null, mapDispatchToProps)(Header)
+export default Header

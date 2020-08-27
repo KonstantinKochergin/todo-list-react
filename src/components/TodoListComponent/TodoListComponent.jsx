@@ -4,12 +4,14 @@ import Header from '../Header/Header'
 import Todos from '../Todos/Todos'
 import AddTodo from '../AddTodo/AddTodo'
 import {getTodosFromStorage} from '../../redux/actions/index'
-import { connect } from 'react-redux'
+import { useDispatch } from 'react-redux'
 
 const TodoListComponent = props => {
     
+    const dispatch = useDispatch()
+
     useEffect(() => {
-        props.getTodosFromStorage()
+        dispatch(getTodosFromStorage())
     })
     
     return (
@@ -21,8 +23,4 @@ const TodoListComponent = props => {
     )
 }
 
-const mapDispatchToProps = dispatch => ({
-    getTodosFromStorage: () => dispatch(getTodosFromStorage())
-})
-
-export default connect(null, mapDispatchToProps)(TodoListComponent)
+export default TodoListComponent
